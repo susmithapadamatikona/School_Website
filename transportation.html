@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Transportation | EDUCARE International School</title>
+<meta name="description" content="Safe school transport at EDUCARE: 42 GPS-tracked AC buses, 24 routes, trained drivers and attendants, and live bus tracking for parents.">
+<meta name="theme-color" content="#013431">
+<meta property="og:title" content="Transportation | EDUCARE International School">
+<meta property="og:description" content="Safe school transport at EDUCARE: 42 GPS-tracked AC buses, 24 routes, trained drivers and attendants, and live bus tracking for parents.">
+<meta property="og:type" content="website">
+<link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@500;600;700&family=Poppins:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<link rel="stylesheet" href="css/style.css">
+<script>try{var t=JSON.parse(localStorage.getItem('educare:theme'));if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+</head>
+<body class="has-dark-hero">
+<div id="page-loader" class="page-loader" aria-hidden="true"><img class="loader-logo logo-img-dark" src="assets/images/stackly-logo-dark.webp" alt="" width="320" height="132"><img class="loader-logo logo-img-light" src="assets/images/stackly-logo-light.webp" alt="" width="320" height="132"><div class="loader-bar"></div></div>
+<a class="skip-link" href="#main">Skip to main content</a>
+<div data-include="header"></div>
+<main id="main">
+<section class="page-hero" style="background-image:url('assets/images/photos/bus.webp')"><div class="container">
+<nav aria-label="Breadcrumb"><ol class="breadcrumb"><li><a href="index.html">Home</a></li><li><a href="campus.html">Campus</a></li><li aria-current="page">Transportation</li></ol></nav>
+<span class="eyebrow"><i class="fa-solid fa-bus"></i> Transportation</span>
+<h1>Safe, tracked, <span class="text-gradient">reliable</span> transport</h1>
+<p>GPS-enabled AC buses with female attendants, CCTV and live tracking in the parent portal.</p><div class="hero-actions btn-group"><a class="btn btn-primary" href="login.html?role=parent"><i class="fa-solid fa-map-location-dot"></i> Track in Parent Portal</a></div>
+</div></section>
+<section class="section"><div class="container">
+  <div class="section-head-row"><div class="section-head left" data-reveal="up"><span class="eyebrow"><i class="fa-solid fa-satellite-dish"></i> Live Demo</span><h2>Fleet on the map — right now</h2><p>Simulated live positions refresh every few seconds. Parents see only their child's bus with stop-by-stop ETA.</p></div><span class="badge badge-success badge-dot">Live</span></div>
+  <div class="track-layout"><div class="bus-list" id="publicBusList"></div><div class="track-map" id="publicMap" aria-label="Map of school bus routes"></div></div>
+</div></section>
+<section class="section section-alt"><div class="container"><div class="section-head " data-reveal="up"><span class="eyebrow "><i class="fa-solid fa-shield-halved"></i> Safety</span><h2>Every journey, protected</h2></div>
+<div class="grid grid-4"><article class="card card-hover feature-card" data-reveal="up" data-delay="0"><span class="icon-box "><i class="fa-solid fa-location-crosshairs"></i></span><h3>GPS Tracking</h3><p>Real-time location and ETA in the parent portal.</p></article><article class="card card-hover feature-card" data-reveal="up" data-delay="70"><span class="icon-box teal"><i class="fa-solid fa-video"></i></span><h3>CCTV Monitoring</h3><p>Cameras in every bus with 30-day recording.</p></article><article class="card card-hover feature-card" data-reveal="up" data-delay="140"><span class="icon-box pink"><i class="fa-solid fa-person-dress"></i></span><h3>Female Attendants</h3><p>A trained attendant on every route.</p></article><article class="card card-hover feature-card" data-reveal="up" data-delay="210"><span class="icon-box gold"><i class="fa-solid fa-id-card"></i></span><h3>RFID Boarding</h3><p>Parents are notified when children board and alight.</p></article><article class="card card-hover feature-card" data-reveal="up" data-delay="280"><span class="icon-box red"><i class="fa-solid fa-gauge-high"></i></span><h3>Speed Governors</h3><p>Limited to 40 km/h with driver behaviour analytics.</p></article><article class="card card-hover feature-card" data-reveal="up" data-delay="350"><span class="icon-box green"><i class="fa-solid fa-kit-medical"></i></span><h3>First Aid</h3><p>First-aid kits and fire extinguishers on board.</p></article><article class="card card-hover feature-card" data-reveal="up" data-delay="420"><span class="icon-box purple"><i class="fa-solid fa-user-shield"></i></span><h3>Verified Drivers</h3><p>Police-verified drivers with 10+ years experience.</p></article><article class="card card-hover feature-card" data-reveal="up" data-delay="490"><span class="icon-box sky"><i class="fa-solid fa-snowflake"></i></span><h3>AC Fleet</h3><p>Comfortable air-conditioned buses on all routes.</p></article></div></div></section>
+</main>
+<div data-include="footer"></div>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" defer></script>
+<script src="js/utils.js" defer></script>
+<script src="assets/data/school-data.js" defer></script>
+<script src="js/storage.js" defer></script>
+<script src="js/toast.js" defer></script>
+<script src="js/modal.js" defer></script>
+<script src="js/validation.js" defer></script>
+<script src="js/auth.js" defer></script>
+<script src="js/animations.js" defer></script>
+<script src="js/navbar.js" defer></script>
+<script src="js/search.js" defer></script>
+<script src="js/slider.js" defer></script>
+<script src="js/gallery.js" defer></script>
+<script src="js/filter.js" defer></script>
+<script src="js/components.js" defer></script>
+<script src="js/transport.js" defer></script>
+<script src="js/main.js" defer></script>
+</body>
+</html>

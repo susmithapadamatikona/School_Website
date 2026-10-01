@@ -1,0 +1,90 @@
+/* ==========================================================================
+   Buttons
+   ========================================================================== */
+.btn {
+    --btn-bg: var(--card-bg); --btn-color: var(--text-primary); --btn-border: var(--border);
+    position: relative; display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+    padding: 13px 26px; border-radius: var(--radius-full);
+    font: 600 .95rem/1.2 var(--font-head); letter-spacing: .005em; white-space: nowrap;
+    background: var(--btn-bg); color: var(--btn-color); border: 1.5px solid var(--btn-border);
+    cursor: pointer; overflow: hidden; isolation: isolate;
+    transition: transform var(--t), box-shadow var(--t), background var(--t), color var(--t), border-color var(--t);
+}
+.btn:hover { transform: translateY(-2px); color: var(--btn-color); }
+.btn:active { transform: translateY(0) scale(.98); }
+.btn:disabled, .btn.disabled { opacity: .55; pointer-events: none; }
+.btn i { font-size: .95em; transition: transform var(--t); }
+.btn:hover .fa-arrow-right, .btn:hover .fa-arrow-right-long { transform: translateX(4px); }
+
+.btn-primary { --btn-bg: var(--primary); --btn-color: #fff; --btn-border: var(--primary); box-shadow: var(--shadow-primary); }
+.btn-primary::before { content: ""; position: absolute; inset: 0; z-index: -1; background: var(--primary-gradient); opacity: 0; transition: opacity var(--t); }
+.btn-primary:hover::before { opacity: 1; }
+.btn-primary:hover { box-shadow: 0 18px 36px -12px rgba(1, 52, 49, .6); }
+
+.btn-gradient { --btn-bg: transparent; --btn-color: #fff; --btn-border: transparent; background: var(--primary-gradient); box-shadow: var(--shadow-primary); }
+.btn-secondary { --btn-bg: var(--secondary); --btn-color: #fff; --btn-border: var(--secondary); box-shadow: 0 12px 26px -12px rgba(21, 155, 120, .6); }
+.btn-secondary:hover { --btn-bg: var(--secondary-dark); --btn-border: var(--secondary-dark); }
+.btn-gold { --btn-bg: var(--accent); --btn-color: var(--primary); --btn-border: var(--accent); box-shadow: 0 12px 26px -12px rgba(255, 184, 28, .6); }
+.btn-dark { --btn-bg: var(--dark); --btn-color: #fff; --btn-border: var(--dark); }
+.btn-danger { --btn-bg: var(--danger); --btn-color: #fff; --btn-border: var(--danger); }
+.btn-success { --btn-bg: var(--success); --btn-color: #fff; --btn-border: var(--success); }
+
+.btn-outline { --btn-bg: transparent; --btn-color: var(--primary); --btn-border: rgba(var(--primary-rgb), .35); }
+.btn-outline:hover { --btn-bg: var(--primary); --btn-color: #fff; --btn-border: var(--primary); }
+.btn-light { --btn-bg: #fff; --btn-color: var(--primary); --btn-border: #fff; }
+.btn-light:hover { --btn-color: var(--primary-dark); box-shadow: 0 14px 30px -12px rgba(0,0,0,.3); }
+.btn-outline-light { --btn-bg: transparent; --btn-color: #fff; --btn-border: rgba(255,255,255,.5); }
+.btn-outline-light:hover { --btn-bg: #fff; --btn-color: var(--primary); --btn-border: #fff; }
+.btn-ghost { --btn-bg: transparent; --btn-color: var(--text-secondary); --btn-border: transparent; }
+.btn-ghost:hover { --btn-bg: var(--section-bg); --btn-color: var(--primary); }
+.btn-soft { --btn-bg: var(--tint-primary); --btn-color: var(--primary); --btn-border: transparent; }
+.btn-soft:hover { --btn-bg: var(--primary); --btn-color: #fff; }
+.btn-soft-danger { --btn-bg: var(--tint-danger); --btn-color: var(--danger); --btn-border: transparent; }
+.btn-soft-danger:hover { --btn-bg: var(--danger); --btn-color: #fff; }
+.btn-soft-success { --btn-bg: var(--tint-success); --btn-color: #159B78; --btn-border: transparent; }
+.btn-soft-success:hover { --btn-bg: var(--success); --btn-color: #fff; }
+
+.btn-sm { padding: 8px 16px; font-size: .82rem; gap: 7px; }
+.btn-xs { padding: 5px 11px; font-size: .75rem; gap: 6px; }
+.btn-lg { padding: 16px 32px; font-size: 1.02rem; }
+.btn-block { width: 100%; }
+.btn-square { border-radius: var(--radius-sm); }
+
+.btn-icon {
+    width: 42px; height: 42px; padding: 0; border-radius: 12px; flex-shrink: 0;
+    display: inline-grid; place-items: center; color: var(--text-secondary);
+    background: transparent; border: 1px solid transparent; transition: all var(--t); position: relative;
+}
+.btn-icon:hover { background: var(--section-bg); color: var(--primary); }
+.btn-icon.bordered { border-color: var(--border); background: var(--card-bg); }
+.btn-icon.sm { width: 34px; height: 34px; border-radius: 10px; font-size: .85rem; }
+.btn-icon .count {
+    position: absolute; top: -4px; right: -4px; min-width: 19px; height: 19px; padding: 0 5px; border-radius: 10px;
+    background: var(--danger); color: #fff; font: 700 .66rem/19px var(--font-body); text-align: center;
+    border: 2px solid var(--card-bg); animation: popIn .35s var(--ease-spring);
+}
+.btn-icon .count:empty, .btn-icon .count[data-count="0"] { display: none; }
+
+.btn-play {
+    display: inline-flex; align-items: center; gap: 14px; font: 600 .95rem var(--font-head); color: var(--heading);
+}
+.btn-play .play-icon {
+    width: 54px; height: 54px; border-radius: 50%; display: grid; place-items: center; position: relative;
+    background: var(--card-bg); color: var(--primary); box-shadow: var(--shadow); transition: transform var(--t);
+}
+.btn-play .play-icon::before { content: ""; position: absolute; inset: -6px; border-radius: 50%; border: 2px solid rgba(var(--primary-rgb), .25); animation: ringPulse 2s ease-out infinite; }
+.btn-play:hover .play-icon { transform: scale(1.08); }
+.btn-play:hover { color: var(--primary); }
+
+.link-arrow { display: inline-flex; align-items: center; gap: 8px; font: 600 .9rem var(--font-head); color: var(--primary); }
+.link-arrow i { transition: transform var(--t); }
+.link-arrow:hover i { transform: translateX(5px); }
+
+.btn.loading { color: transparent !important; pointer-events: none; }
+.btn.loading::after {
+    content: ""; position: absolute; width: 18px; height: 18px; border-radius: 50%;
+    border: 2.5px solid rgba(255,255,255,.4); border-top-color: #fff; animation: spin .7s linear infinite;
+}
+.btn-outline.loading::after, .btn-ghost.loading::after, .btn-soft.loading::after { border-color: rgba(var(--primary-rgb), .25); border-top-color: var(--primary); }
+
+.btn-group { display: flex; flex-wrap: wrap; gap: 14px; align-items: center; }

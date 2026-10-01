@@ -1,0 +1,23 @@
+/* ==========================================================================
+   EDUCARE — Stylesheet entry point
+   Every page links only this file. Order matters: tokens → base → components
+   → page sections → portal → responsive overrides.
+   ========================================================================== */
+@import url('variables.css');
+@import url('base.css');
+@import url('utilities.css');
+@import url('buttons.css');
+@import url('forms.css');
+@import url('tables.css');
+@import url('animations.css');
+@import url('header.css');
+@import url('hero.css');
+@import url('school.css');
+@import url('academics.css');
+@import url('faculty.css');
+@import url('admissions.css');
+@import url('events.css');
+@import url('gallery.css');
+@import url('dashboard.css');
+@import url('footer.css');
+@import url('responsive.css');

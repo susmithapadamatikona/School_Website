@@ -1,0 +1,28 @@
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+.site-footer { background: var(--dark); color: #DDE9E8; position: relative; overflow: hidden; }
+.site-footer::before { content: ""; position: absolute; width: 520px; height: 520px; right: -180px; top: -260px; border-radius: 50%; background: radial-gradient(circle, rgba(21, 155, 120,.18), transparent 65%); }
+.site-footer::after { content: ""; position: absolute; width: 480px; height: 480px; left: -200px; bottom: -260px; border-radius: 50%; background: radial-gradient(circle, rgba(1, 52, 49,.2), transparent 65%); }
+.site-footer .container { position: relative; z-index: 1; }
+.footer-top { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr 1.35fr; gap: 40px; padding: 80px 0 56px; }
+.footer-brand p { color: #DDE9E8; font-size: .92rem; margin: 20px 0 24px; max-width: 320px; }
+.footer-social { display: flex; gap: 10px; }
+.footer-social a { width: 40px; height: 40px; border-radius: 12px; display: grid; place-items: center; background: rgba(255,255,255,.1); color: #FFFFFF; border: 1px solid rgba(255,255,255,.22); transition: all var(--t); }
+.footer-social a:hover { background: var(--green); color: #fff; transform: translateY(-3px); border-color: var(--green); }
+.footer-col h4 { color: #fff; font-size: 1rem; margin-bottom: 22px; position: relative; padding-bottom: 12px; }
+.footer-col h4::after { content: ""; position: absolute; left: 0; bottom: 0; width: 30px; height: 2px; border-radius: 2px; background: var(--gold); }
+.footer-links { list-style: none; display: grid; gap: 11px; }
+.footer-links a { color: #DDE9E8; font-size: .9rem; display: inline-flex; align-items: center; gap: 8px; transition: all var(--t); }
+.footer-links a::before { content: ""; width: 0; height: 2px; background: var(--gold); transition: width var(--t); }
+.footer-links a:hover { color: var(--gold); }
+.footer-links a:hover::before { width: 10px; }
+.footer-contact { display: grid; gap: 16px; }
+.footer-contact div { display: flex; gap: 12px; font-size: .88rem; }
+.footer-contact i { color: var(--gold); margin-top: 4px; width: 16px; }
+.footer-contact a { color: #DDE9E8; }
+.footer-contact a:hover { color: var(--gold); }
+.footer-bottom { border-top: 1px solid rgba(255,255,255,.18); color: #C9DCDA; padding: 22px 0; display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; font-size: .84rem; }
+.footer-bottom nav { display: flex; gap: 22px; flex-wrap: wrap; }
+.footer-bottom a { color: #DDE9E8; }
+.footer-bottom a:hover { color: var(--gold); }

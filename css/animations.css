@@ -1,0 +1,45 @@
+/* ==========================================================================
+   Animations & scroll reveal
+   ========================================================================== */
+@keyframes pageEnter { from { opacity: 0; } to { opacity: 1; } }
+@keyframes fadeUp { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: none; } }
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+@keyframes popIn { 0% { transform: scale(.5); opacity: 0; } 100% { transform: scale(1); opacity: 1; } }
+@keyframes spin { to { transform: rotate(360deg); } }
+@keyframes shimmer { to { transform: translateX(100%); } }
+@keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-14px); } }
+@keyframes floatAlt { 0%, 100% { transform: translateY(0) rotate(0); } 50% { transform: translateY(10px) rotate(3deg); } }
+@keyframes blob { 0%, 100% { border-radius: 42% 58% 70% 30% / 45% 45% 55% 55%; } 50% { border-radius: 70% 30% 46% 54% / 30% 29% 71% 70%; } }
+@keyframes ringPulse { 0% { transform: scale(1); opacity: .8; } 100% { transform: scale(1.35); opacity: 0; } }
+@keyframes livePing { 0% { transform: scale(.8); opacity: 1; } 100% { transform: scale(2); opacity: 0; } }
+@keyframes loaderPulse { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.08); } }
+@keyframes loaderSlide { 0% { transform: translateX(-100%); } 100% { transform: translateX(250%); } }
+@keyframes toastIn { from { opacity: 0; transform: translateX(40px) scale(.95); } to { opacity: 1; transform: none; } }
+@keyframes toastOut { to { opacity: 0; transform: translateX(40px); } }
+@keyframes toastTimer { from { width: 100%; } to { width: 0; } }
+@keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+@keyframes scrollDot { 0% { transform: translate(-50%, 0); opacity: 1; } 100% { transform: translate(-50%, 14px); opacity: 0; } }
+@keyframes rotateSlow { to { transform: rotate(360deg); } }
+@keyframes bellShake { 0%, 100% { transform: rotate(0); } 20% { transform: rotate(14deg); } 40% { transform: rotate(-12deg); } 60% { transform: rotate(8deg); } 80% { transform: rotate(-4deg); } }
+@keyframes highlight { 0% { background: rgba(var(--primary-rgb), .15); } 100% { background: transparent; } }
+@keyframes slideText { 0% { opacity: 0; transform: translateY(100%); } 100% { opacity: 1; transform: none; } }
+
+.anim-float { animation: float 6s ease-in-out infinite; }
+.anim-float-alt { animation: floatAlt 7s ease-in-out infinite; }
+.anim-spin-slow { animation: rotateSlow 30s linear infinite; }
+.bell-shake { animation: bellShake .8s ease; }
+.flash { animation: highlight 1.6s ease; }
+
+/* Scroll reveal */
+[data-reveal] { opacity: 0; transition: opacity .8s var(--ease-out), transform .8s var(--ease-out); will-change: opacity, transform; }
+[data-reveal="up"], [data-reveal=""] { transform: translateY(36px); }
+[data-reveal="down"] { transform: translateY(-36px); }
+[data-reveal="left"] { transform: translateX(-44px); }
+[data-reveal="right"] { transform: translateX(44px); }
+[data-reveal="zoom"] { transform: scale(.92); }
+[data-reveal].revealed { opacity: 1; transform: none; }
+
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation-duration: .001ms !important; animation-iteration-count: 1 !important; transition-duration: .001ms !important; scroll-behavior: auto !important; }
+    [data-reveal] { opacity: 1; transform: none; }
+}

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Create Account | EDUCARE International School</title>
+<meta name="description" content="Register for an EDUCARE portal account as a student, parent or teacher.">
+<meta name="theme-color" content="#013431">
+<meta property="og:title" content="Create Account | EDUCARE International School">
+<meta property="og:description" content="Register for an EDUCARE portal account as a student, parent or teacher.">
+<meta property="og:type" content="website">
+<link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@500;600;700&family=Poppins:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<link rel="stylesheet" href="css/style.css">
+<script>try{var t=JSON.parse(localStorage.getItem('educare:theme'));if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+</head>
+<body data-no-fab="1">
+<div id="page-loader" class="page-loader" aria-hidden="true"><img class="loader-logo logo-img-dark" src="assets/images/stackly-logo-dark.webp" alt="" width="320" height="132"><img class="loader-logo logo-img-light" src="assets/images/stackly-logo-light.webp" alt="" width="320" height="132"><div class="loader-bar"></div></div>
+<main class="auth-page" id="main">
+  <section class="auth-visual" aria-hidden="false">
+    <img src="assets/images/photos/studyGroup.webp" alt="">
+    <a class="logo" href="index.html" aria-label="Stackly International School — Home"><img class="logo-img logo-img-dark" src="assets/images/stackly-logo-dark.webp" alt="Stackly" width="320" height="132"><img class="logo-img logo-img-light" src="assets/images/stackly-logo-light.webp" alt="" aria-hidden="true" width="320" height="132"></a>
+    <div><h2>Join the EDUCARE community</h2><p>Create your account to access homework, results, fees and school updates.</p>
+      <div class="auth-feature-list">
+        <div class="auth-feature"><span class="icon-box"><i class="fa-solid fa-bolt"></i></span><div><strong>Real-time updates</strong><small>Attendance, homework &amp; results the moment they happen</small></div></div>
+        <div class="auth-feature"><span class="icon-box"><i class="fa-solid fa-bus"></i></span><div><strong>Live bus tracking</strong><small>Know exactly when the bus reaches your stop</small></div></div>
+        <div class="auth-feature"><span class="icon-box"><i class="fa-solid fa-shield-halved"></i></span><div><strong>Secure &amp; private</strong><small>Role-based access for students, parents &amp; staff</small></div></div></div></div>
+    <p class="auth-foot">© EDUCARE International School · Gachibowli, Hyderabad</p>
+  </section>
+  <section class="auth-form-wrap">
+    <div class="auth-top"><a class="btn btn-ghost btn-sm" href="index.html"><i class="fa-solid fa-arrow-left"></i> Back to website</a><button class="btn-icon theme-toggle" data-theme-toggle aria-label="Toggle dark mode"><i class="fa-solid fa-moon"></i><i class="fa-solid fa-sun"></i></button></div>
+    <div class="auth-box">
+<h1>Create account</h1><p>It only takes a minute.</p>
+<form id="registerForm" novalidate class="form-grid">
+  <div class="form-group span-2"><span class="form-label">I am registering as</span><div class="radio-cards">
+    <div class="radio-card"><input type="radio" name="role" id="rS" value="student" checked><label for="rS"><i class="fa-solid fa-user-graduate"></i>Student</label></div>
+    <div class="radio-card"><input type="radio" name="role" id="rP" value="parent"><label for="rP"><i class="fa-solid fa-people-roof"></i>Parent</label></div>
+    <div class="radio-card"><input type="radio" name="role" id="rT" value="teacher"><label for="rT"><i class="fa-solid fa-chalkboard-user"></i>Teacher</label></div></div></div>
+  <div class="form-group span-2"><label class="form-label" for="regName">Full name <span class="req">*</span></label><input class="form-control" id="regName" required placeholder="Enter your full name" data-rule="name" autocomplete="name"></div>
+  <div class="form-group"><label class="form-label" for="regEmail">Email <span class="req">*</span></label><input class="form-control" type="email" id="regEmail" required placeholder="name@example.com" autocomplete="email"></div>
+  <div class="form-group"><label class="form-label" for="regPhone">Phone <span class="req">*</span></label><input class="form-control" id="regPhone" required placeholder="+91 98765 43210" data-rule="phone" autocomplete="tel"></div>
+  <div class="form-group span-2"><label class="form-label" for="regPassword">Password <span class="req">*</span></label><div class="input-icon"><i class="fa-solid fa-lock"></i><input class="form-control has-action" type="password" id="regPassword" required placeholder="Create a password" data-rule="password" autocomplete="new-password"><button type="button" class="input-action" data-toggle-password="#regPassword" aria-label="Show password"><i class="fa-solid fa-eye"></i></button></div>
+    <div class="pw-strength" id="pwMeter" data-level="0"><span></span><span></span><span></span><span></span></div><span class="pw-label" id="pwLabel"></span>
+    <ul class="pw-rules" id="pwRules"><li data-check="length"><i class="fa-solid fa-circle"></i> 8+ characters</li><li data-check="upper"><i class="fa-solid fa-circle"></i> Upper-case letter</li><li data-check="number"><i class="fa-solid fa-circle"></i> A number</li><li data-check="symbol"><i class="fa-solid fa-circle"></i> A symbol</li></ul></div>
+  <div class="form-group span-2"><label class="form-label" for="regConfirm">Confirm password <span class="req">*</span></label><input class="form-control" type="password" id="regConfirm" required placeholder="Re-enter your password" data-rule="match:#regPassword" autocomplete="new-password"></div>
+  <div class="form-group span-2"><span class="form-label">Profile photo</span><div class="avatar-upload"><div class="preview" id="photoPreview"><i class="fa-solid fa-camera"></i></div><label class="btn btn-soft btn-sm" for="regPhoto"><i class="fa-solid fa-upload"></i> Upload photo</label><input type="file" id="regPhoto" accept="image/*" hidden></div></div>
+  <div class="form-group span-2"><label class="checkbox"><input type="checkbox" required data-msg="Please accept the terms"> I agree to the <a href="#">Terms</a> and <a href="#">Privacy Policy</a>.</label></div>
+  <div class="span-2"><button class="btn btn-primary btn-lg btn-block" type="submit">Create Account</button></div>
+</form>
+<p class="auth-alt">Already have an account? <a href="login.html">Sign in</a></p></div>
+  </section>
+</main>
+<script src="js/utils.js" defer></script>
+<script src="assets/data/school-data.js" defer></script>
+<script src="js/storage.js" defer></script>
+<script src="js/toast.js" defer></script>
+<script src="js/modal.js" defer></script>
+<script src="js/validation.js" defer></script>
+<script src="js/auth.js" defer></script>
+<script src="js/animations.js" defer></script>
+<script src="js/navbar.js" defer></script>
+<script src="js/search.js" defer></script>
+<script src="js/slider.js" defer></script>
+<script src="js/gallery.js" defer></script>
+<script src="js/filter.js" defer></script>
+<script src="js/components.js" defer></script>
+<script src="js/main.js" defer></script>
+</body>
+</html>

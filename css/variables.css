@@ -1,0 +1,166 @@
+/* ==========================================================================
+   Stackly — Design Tokens
+   ========================================================================== */
+:root {
+    /* ---- Brand palette ---- */
+    /* Main background */
+    --primary-bg: #FFFFFF;
+    --secondary-bg: #F5FAFA;
+    --section-bg: #F8FCFC;
+    --card-bg: #FFFFFF;
+
+    /* Primary brand — deep teal */
+    --primary: #013431;
+    --primary-dark: #002522;
+    --primary-light: #0F6B61;
+    --primary-rgb: 1, 52, 49;
+
+    /* Green */
+    --green: #159B78;
+    --green-light: #DDF6EC;
+
+    /* Gold / yellow */
+    --gold: #FFB81C;
+    --gold-light: #FFF3C7;
+    --gold-dark: #E89A00;
+
+    /* Blue */
+    --blue: #2196F3;
+    --blue-light: #E3F2FD;
+
+    /* Purple */
+    --purple: #7356D8;
+    --purple-light: #EEE9FF;
+
+    /* Orange */
+    --orange: #F59E0B;
+    --orange-light: #FFF1D6;
+
+    /* Text */
+    --text-dark: #123B46;
+    --text-primary: #173B43;
+    --text-secondary: #526B72;
+    --text-muted: #84959A;
+
+    --white: #FFFFFF;
+
+    /* Borders */
+    --border: #DDE9E8;
+    --border-light: #EDF4F3;
+    --border-strong: #C9DCDA;
+
+    /* Status */
+    --success: #16A085;
+    --warning: #F59E0B;
+    --danger: #E74C3C;
+    --info: var(--blue);
+
+    --shadow-color: rgba(1, 52, 49, 0.10);
+
+    /* ---- Semantic aliases used across the site (mapped onto the palette) ---- */
+    --secondary: var(--green);
+    --secondary-dark: var(--primary-light);
+    --secondary-rgb: 21, 155, 120;
+    --accent: var(--gold);
+    --accent-light: var(--gold);
+    --pink: #EC4899;
+
+    --dark: var(--primary-dark);
+    --heading: var(--text-dark);
+
+    --glass: rgba(255, 255, 255, 0.72);
+    --glass-border: rgba(255, 255, 255, 0.65);
+
+    --tint-primary: var(--border-light);
+    --tint-secondary: var(--green-light);
+    --tint-accent: var(--gold-light);
+    --tint-success: var(--green-light);
+    --tint-danger: #FDECEA;
+    --tint-info: var(--blue-light);
+    --tint-purple: var(--purple-light);
+    --tint-pink: #FDF2F8;
+
+    --hero-gradient: linear-gradient(135deg, #F5FAFA 0%, #DDF6EC 50%, #FFFFFF 100%);
+    --primary-gradient: linear-gradient(135deg, #013431 0%, #159B78 100%);
+    --gold-gradient: linear-gradient(135deg, #E89A00 0%, #FFB81C 100%);
+    --dark-gradient: linear-gradient(135deg, #002522 0%, #013431 60%, #0F6B61 100%);
+
+    /* Typography */
+    --font-head: 'Poppins', system-ui, sans-serif;
+    --font-body: 'Inter', 'Manrope', system-ui, -apple-system, sans-serif;
+    --font-alt: 'Manrope', 'Inter', sans-serif;
+
+    /* Radius */
+    --radius-xs: 6px;
+    --radius-sm: 10px;
+    --radius: 14px;
+    --radius-lg: 20px;
+    --radius-xl: 28px;
+    --radius-full: 999px;
+
+    /* Shadows */
+    /* Shadows (tinted with the brand teal) */
+    --shadow-xs: 0 1px 2px rgba(1, 52, 49, .05);
+    --shadow-sm: 0 2px 10px -2px var(--shadow-color);
+    --shadow: 0 12px 32px -14px rgba(1, 52, 49, .20);
+    --shadow-lg: 0 28px 64px -24px rgba(1, 52, 49, .28);
+    --shadow-primary: 0 14px 30px -12px rgba(1, 52, 49, .45);
+    --shadow-card-hover: 0 22px 48px -20px rgba(1, 52, 49, .28);
+
+    /* Motion */
+    --ease: cubic-bezier(.4, 0, .2, 1);
+    --ease-out: cubic-bezier(.16, 1, .3, 1);
+    --ease-spring: cubic-bezier(.34, 1.56, .64, 1);
+    --t-fast: .15s var(--ease);
+    --t: .25s var(--ease);
+    --t-slow: .5s var(--ease-out);
+
+    /* Layout */
+    --container: 1240px;
+    --header-h: 78px;
+    --sidebar-w: 264px;
+    --topbar-h: 70px;
+
+    color-scheme: light;
+}
+
+[data-theme="dark"] {
+    --primary-bg: #021B19;
+    --secondary-bg: #03211F;
+    --card-bg: #062825;
+    --section-bg: #041F1D;
+
+    --primary: #159B78;
+    --primary-dark: #0F6B61;
+    --primary-light: #DDF6EC;
+    --primary-rgb: 21, 155, 120;
+
+    --heading: #F5FAFA;
+    --text-primary: #DDE9E8;
+    --text-secondary: #9DB3B1;
+    --text-muted: #6F8886;
+
+    --border: #0E3632;
+    --border-strong: #1A4A45;
+
+    --glass: rgba(6, 40, 37, 0.72);
+    --glass-border: rgba(221, 233, 232, 0.14);
+
+    --tint-primary: rgba(21, 155, 120, .14);
+    --tint-secondary: rgba(21, 155, 120, .14);
+    --tint-accent: rgba(255, 184, 28, .14);
+    --tint-success: rgba(22, 160, 133, .14);
+    --tint-danger: rgba(231, 76, 60, .14);
+    --tint-info: rgba(33, 150, 243, .14);
+    --tint-purple: rgba(115, 86, 216, .16);
+    --tint-pink: rgba(236, 72, 153, .14);
+
+    --hero-gradient: linear-gradient(135deg, #021B19 0%, #03231F 50%, #021B19 100%);
+
+    --shadow-sm: 0 2px 10px -2px rgba(0, 0, 0, .4);
+    --shadow: 0 12px 32px -14px rgba(0, 0, 0, .6);
+    --shadow-lg: 0 28px 64px -24px rgba(0, 0, 0, .7);
+    --shadow-card-hover: 0 22px 48px -20px rgba(0, 0, 0, .7);
+
+    color-scheme: dark;
+}

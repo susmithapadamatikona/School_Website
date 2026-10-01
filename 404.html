@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Page Not Found | EDUCARE International School</title>
+<meta name="description" content="The page you are looking for could not be found.">
+<meta name="theme-color" content="#013431">
+<meta property="og:title" content="Page Not Found | EDUCARE International School">
+<meta property="og:description" content="The page you are looking for could not be found.">
+<meta property="og:type" content="website">
+<link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@500;600;700&family=Poppins:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<link rel="stylesheet" href="css/style.css">
+<script>try{var t=JSON.parse(localStorage.getItem('educare:theme'));if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+</head>
+<body class="has-dark-hero" data-no-fab="1">
+<div id="page-loader" class="page-loader" aria-hidden="true"><img class="loader-logo logo-img-dark" src="assets/images/stackly-logo-dark.webp" alt="" width="320" height="132"><img class="loader-logo logo-img-light" src="assets/images/stackly-logo-light.webp" alt="" width="320" height="132"><div class="loader-bar"></div></div>
+<a class="skip-link" href="#main">Skip to main content</a>
+<main id="main">
+
+<section class="error-page" style="background-image:url('assets/images/photos/books.webp')"><div><a class="error-logo" href="index.html" aria-label="Stackly International School — Home"><img src="assets/images/stackly-logo-light.webp" alt="Stackly" width="320" height="132"></a><div class="error-code">4<span style="opacity:0">0</span>4<span class="ghost">📚</span></div>
+<h1 style="font-size:clamp(1.6rem,3vw,2.4rem)">Oops! This page skipped class.</h1><p class="lead" style="max-width:520px;margin:0 auto 28px">The page you're looking for may have moved or no longer exists. Let's get you back on track.</p>
+<div class="btn-group justify-center"><a class="btn btn-primary btn-lg" href="index.html"><i class="fa-solid fa-house"></i> Back to Home</a><button type="button" class="btn btn-ghost btn-lg" id="goBack"><i class="fa-solid fa-arrow-left"></i> Go Back</button></div>
+<div class="flex justify-center gap-8 flex-wrap mt-32"><a class="tag" href="admissions.html">Admissions</a><a class="tag" href="academics.html">Academics</a><a class="tag" href="events.html">Events</a><a class="tag" href="contact.html">Contact</a><a class="tag" href="login.html">Portal Login</a></div></div></section>
+</main>
+
+<script src="js/utils.js" defer></script>
+<script src="assets/data/school-data.js" defer></script>
+<script src="js/storage.js" defer></script>
+<script src="js/toast.js" defer></script>
+<script src="js/modal.js" defer></script>
+<script src="js/validation.js" defer></script>
+<script src="js/auth.js" defer></script>
+<script src="js/animations.js" defer></script>
+<script src="js/navbar.js" defer></script>
+<script src="js/search.js" defer></script>
+<script src="js/slider.js" defer></script>
+<script src="js/gallery.js" defer></script>
+<script src="js/filter.js" defer></script>
+<script src="js/components.js" defer></script>
+<script src="js/main.js" defer></script>
+<script>
+// Go Back returns to the previous page; with no history (opened directly) it falls back to the home page
+document.getElementById('goBack').addEventListener('click', function () {
+    if (history.length > 1 && document.referrer) history.back(); else location.href = 'index.html';
+});
+</script>
+</body>
+</html>

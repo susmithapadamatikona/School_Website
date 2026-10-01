@@ -1,0 +1,39 @@
+/* ==========================================================================
+   Faculty directory
+   ========================================================================== */
+.faculty-card { display: flex; flex-direction: column; height: 100%; }
+.faculty-card .photo { position: relative; aspect-ratio: 1/1; overflow: hidden; }
+.faculty-card .photo img { width: 100%; height: 100%; object-fit: cover; transition: transform .8s var(--ease-out); }
+.faculty-card:hover .photo img { transform: scale(1.07); }
+.faculty-card .photo .dept-badge { position: absolute; left: 14px; top: 14px; }
+.faculty-card .photo .socials {
+    position: absolute; left: 0; right: 0; bottom: 0; display: flex; justify-content: center; gap: 8px; padding: 16px;
+    background: linear-gradient(transparent, rgba(1, 52, 49,.75)); transform: translateY(100%); transition: transform .35s var(--ease-out);
+}
+.faculty-card:hover .photo .socials { transform: none; }
+.faculty-card .socials a { width: 36px; height: 36px; border-radius: 50%; display: grid; place-items: center; background: #fff; color: var(--primary); font-size: .85rem; }
+.faculty-card .socials a:hover { background: var(--primary); color: #fff; }
+.faculty-card .card-body { padding: 20px 22px; flex: 1; display: flex; flex-direction: column; }
+.faculty-card h3 { font-size: 1.08rem; margin-bottom: 2px; }
+.faculty-card .designation { font-size: .84rem; color: var(--primary); font-weight: 600; margin-bottom: 12px; }
+.faculty-info { display: grid; gap: 7px; font-size: .82rem; color: var(--text-secondary); margin-bottom: 16px; }
+.faculty-info span { display: flex; gap: 10px; align-items: center; }
+.faculty-info i { width: 14px; color: var(--secondary); }
+.faculty-card .card-foot { padding: 14px 22px; }
+.faculty-card .exp { font: 700 .8rem var(--font-head); color: var(--heading); }
+
+/* Every part sits in a fixed slot so the four cards line up row by row */
+.faculty-highlight { text-align: center; padding: 30px 22px 26px; display: flex; flex-direction: column; align-items: center; height: 100%; }
+.faculty-highlight .avatar { width: 110px; height: 110px; margin: 0 auto 18px; border: 4px solid var(--card-bg); box-shadow: 0 0 0 3px rgba(var(--primary-rgb), .25); flex-shrink: 0; }
+.faculty-highlight h3 { font-size: 1.05rem; margin-bottom: 4px; }
+.faculty-highlight small { display: block; color: var(--primary); font-weight: 600; font-size: .84rem; line-height: 1.4; min-height: 2.8em; } /* room for a two-line title */
+.faculty-highlight p { min-height: 3.2em; line-height: 1.6; margin-top: 10px !important; } /* room for a two-line bio */
+.faculty-highlight .btn { margin-top: auto !important; } /* button pinned to the bottom */
+.faculty-highlight .btn + *, .faculty-highlight > .flex { margin-bottom: 20px; }
+
+.profile-modal-head { display: flex; gap: 22px; align-items: center; margin-bottom: 20px; }
+.profile-modal-head img { width: 110px; height: 110px; border-radius: 22px; object-fit: cover; }
+.profile-facts { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 18px 0; }
+.profile-facts div { padding: 12px 14px; border-radius: 12px; background: var(--section-bg); }
+.profile-facts small { display: block; color: var(--text-muted); font-size: .74rem; text-transform: uppercase; letter-spacing: .06em; }
+.profile-facts strong { font-size: .92rem; }
